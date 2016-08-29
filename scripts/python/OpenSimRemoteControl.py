@@ -171,7 +171,7 @@ class OpenSimRemoteControl() :
         #     return json.loads('{"_Success" : 0, "_Message" : "unknown connection error"}');
         except :
             exctype, value =  sys.exc_info()[:2]
-            warnings.warn('[OpenSimRemoteControl] request failed with exception type %s; %s' %  (exctype, str(value)))
+            warnings.warn('[OpenSimRemoteControl] request failed with exception type %s; %s',  exctype, str(value))
             return json.loads('{"_Success" : 0, "_Message" : "unknown error"}')
 
         try:
